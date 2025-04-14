@@ -101,7 +101,7 @@ module DE1_SOC(
 //=======================================================
 //  Structural coding
 //=======================================================
-esame u0 (
+design u0 (
          .system_pll_ref_clk_clk              (CLOCK_50),             //   pll_ref_clk.clk
          .system_pll_ref_reset_reset          (!KEY[0]),						// pll_ref_reset.reset
 			.sdram_clk_clk							 (),
