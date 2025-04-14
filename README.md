@@ -15,7 +15,8 @@ The system includes custom hardware modules designed in **Platform Designer**, a
 - Manages the **clock logic**: time counting, encoder control, blinking, and display updates  
 - Accesses hardware modules via **memory-mapped registers**  
 - Synchronized with a **hardware timer** to ensure precise counting and blinking  
-- Communicates with FPGA modules through PIO interfaces and control registers
+- Communicates with FPGA modules through PIO interfaces and control registers  
+- ⚙️ **Runs as bare-metal code** (without any operating system), compiled and uploaded using the **Altera Monitor Program**
 
 ### 🧩 Hardware Side (FPGA - Platform Designer)
 - Includes:
@@ -72,14 +73,16 @@ The system includes custom hardware modules designed in **Platform Designer**, a
   - Manages blinking (`blink_state`)  
   - Monitors the encoder and computes delta  
   - Changes mode on button press  
-  - Writes current values to the display register
+  - Writes current values to the display register  
+- ⚠️ The software runs in **bare-metal mode**, without any operating system.  
+  It is **compiled and uploaded using the Altera Monitor Program**, which enables direct execution and debugging on the HPS.
 
 ---
 
 ## 🛠 Technologies Used
 - **Terasic DE1-SoC Board**  
 - **Intel Quartus Prime + Platform Designer**  
-- **C language** running on HPS  
+- **C language** running on HPS (bare-metal)  
 - **Custom hardware modules**: Timer, PIO, Seven-Segment Display  
 - **JTAG UART** for testing/debugging  
 - **Memory-mapped I/O** for HPS ↔ FPGA communication
