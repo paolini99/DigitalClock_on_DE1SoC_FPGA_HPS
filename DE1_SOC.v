@@ -150,7 +150,7 @@ design u0 (
 				.hps_io_hps_io_qspi_inst_CLK	(HPS_FLASH_DCLK),
 
 				// Accelerometer
-			   .hps_io_hps_io_gpio_inst_GPIO61	(HPS_GSENSOR_INT),
+			        .hps_io_hps_io_gpio_inst_GPIO61	(HPS_GSENSOR_INT),
 
 				// General Purpose I/O
 				.hps_io_hps_io_gpio_inst_GPIO40	(HPS_GPIO[0]),
@@ -207,20 +207,20 @@ design u0 (
 			  
 			  .leds_export            		  (LEDR[9:0]),                  	//          ledr.export
 			  .sw_export                    (SW[9:0]),                    	//            sw.export
-			  .keys_export                  (KEY[3:0]),                   	//          keys.export
-	 .my_display_7seg_out_dispa  (HEX0),             // display_out_dispa.out_dispa
-	.my_display_7seg_out_dispb  (HEX1),             // display_out_dispb.out_dispb
-	.my_display_7seg_out_dispc  (HEX2),             // display_out_dispc.out_dispc
-	.my_display_7seg_out_dispd  (HEX3),             // display_out_dispd.out_dispd
-	.my_display_7seg_out_dispe  (HEX4),             // display_out_dispe.out_dispe
-	.my_display_7seg_out_dispf  (HEX5),             // display_out_dispf.out_dispf
+	 		  .keys_export                  (KEY[3:0]),                   	//          keys.export
+	                  .my_display_7seg_out_dispa  (HEX0),             // display_out_dispa.out_dispa
+	                  .my_display_7seg_out_dispb  (HEX1),             // display_out_dispb.out_dispb
+	                  .my_display_7seg_out_dispc  (HEX2),             // display_out_dispc.out_dispc
+	                  .my_display_7seg_out_dispd  (HEX3),             // display_out_dispd.out_dispd
+	                  .my_display_7seg_out_dispe  (HEX4),             // display_out_dispe.out_dispe
+	                  .my_display_7seg_out_dispf  (HEX5),             // display_out_dispf.out_dispf
 	
-   .encoder_data1         (GPIO1GPIO[0]),     // enc0.data1
-.encoder_data2         (GPIO1GPIO[1]),     // enc0.data2
-.encoder_data1_reg_out         (0),                // enc0.datar1
-.encoder_data2_reg_out        (0),                // enc0.datar2
+                          .encoder_data1         (GPIO1GPIO[0]),     // enc0.data1
+                          .encoder_data2         (GPIO1GPIO[1]),     // enc0.data2
+                          .encoder_data1_reg_out         (0),                // enc0.datar1
+                          .encoder_data2_reg_out        (0),                // enc0.datar2
 
-.key_export(GPIO1GPIO[2]),
+                          .key_export(GPIO1GPIO[2]),
 
 
 
